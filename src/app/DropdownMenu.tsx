@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { fetchVehicleMakes, generateYears } from '../lib/api';
 import { IVehicleInfo } from '@/interfaces/AllVehiclesName';
 import { SelectComponent } from '@/components/SelectComponent';
