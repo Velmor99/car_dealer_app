@@ -12,10 +12,6 @@ export function DropdownMenu() {
 
   const isNextDisabled = !selectedVehicle || !selectedYear;
 
-  useEffect(() => {
-    console.log(selectedVehicle);
-  }, [selectedVehicle]);
-
   function onVehicleSelect(option: IOption) {
     setSelectedVehicle(option);
   }
