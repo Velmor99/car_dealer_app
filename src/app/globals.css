@@ -3,12 +3,10 @@
 @tailwind utilities;
 
 :root {
-  
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    
   }
 }
 

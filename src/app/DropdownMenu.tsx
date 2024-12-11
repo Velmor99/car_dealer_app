@@ -1,13 +1,12 @@
-"use client";
-import { useState, useEffect, Suspense } from "react";
-import { fetchVehicleMakes, generateYears } from "../lib/api";
-import { IVehicleInfo } from "@/interfaces/AllVehiclesName";
-import { SelectComponent } from "@/components/SelectComponent";
-import { IOption } from "@/interfaces/SelectInterfaces";
-import Link from "next/link";
+'use client';
+import { useState, useEffect } from 'react';
+import { fetchVehicleMakes, generateYears } from '../lib/api';
+import { IVehicleInfo } from '@/interfaces/AllVehiclesName';
+import { SelectComponent } from '@/components/SelectComponent';
+import { IOption } from '@/interfaces/SelectInterfaces';
+import Link from 'next/link';
 
 export function DropdownMenu() {
-  const [allYearsOptions, setAllYearsOptions] = useState<[] | IOption[]>([]);
   const [selectedVehicle, setSelectedVehicle] = useState<IOption | null>(null);
   const [selectedYear, setSelectedYear] = useState<IOption | null>(null);
 
@@ -50,7 +49,7 @@ export function DropdownMenu() {
           className="block w-full p-2.5 bg-white border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700 font-medium transition duration-150 ease-in-out"
           getOptions={fetchData}
           onChange={onVehicleSelect}
-          value={selectedVehicle?.value || ""}
+          value={selectedVehicle?.value || ''}
         />
         <SelectComponent
           className="block w-full p-2.5 bg-white border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700 font-medium transition duration-150 ease-in-out"
@@ -62,7 +61,12 @@ export function DropdownMenu() {
           <Link
             href={`/result/${selectedVehicle?.value}/${selectedYear?.value}`}
           >
-            <button className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 disabled:bg-gray-400 disabled:text-gray-600 disabled:cursor-not-allowed transition-all duration-300" disabled={isNextDisabled}>Next</button>
+            <button
+              className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 disabled:bg-gray-400 disabled:text-gray-600 disabled:cursor-not-allowed transition-all duration-300"
+              disabled={isNextDisabled}
+            >
+              Next
+            </button>
           </Link>
         </div>
       </div>

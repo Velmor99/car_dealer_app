@@ -1,6 +1,8 @@
 # Car Dealer Application
 
-Welcome to the **Car Dealer Application**! This application allows users to search for car models by selecting a vehicle make and a production year. The application is built with **Next.js** and styled using **Tailwind CSS**, ensuring a modern, responsive, and interactive user experience.
+🚗 Car Dealer App is a Next.js application that allows users to filter car models by make and year, displaying the results dynamically. Visit the live site [here](https://car-dealer-1sick2iin-velmor99s-projects.vercel.app).
+
+Here is a link to production versel site
 
 ## Features
 
@@ -15,7 +17,6 @@ Welcome to the **Car Dealer Application**! This application allows users to sear
 
 - **Pre-rendering Paths**:
   - The application pre-renders specific routes for result pages using `generateStaticParams`. This approach ensures fast load times and improves SEO.
-  
 - **Dynamic Select Components**:
   - The `SelectComponent` is highly reusable and supports dynamic data fetching. The vehicle makes and model years are fetched and displayed dynamically based on the user’s selection.
 
@@ -26,6 +27,7 @@ To run the Car Dealer Application locally, follow the steps below:
 ### Prerequisites
 
 Ensure you have the following installed on your machine:
+
 - [Node.js](https://nodejs.org/) (version 16 or later recommended)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
@@ -39,11 +41,13 @@ cd car_dealer_app
 ### Install Dependencies
 
 Using npm:
+
 ```bash
 npm install
 ```
 
 Or using yarn:
+
 ```bash
 yarn install
 ```
@@ -53,11 +57,13 @@ yarn install
 Start the development server:
 
 Using npm:
+
 ```bash
 npm run dev
 ```
 
 Or using yarn:
+
 ```bash
 yarn dev
 ```
@@ -69,11 +75,13 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the a
 To create a production-ready build:
 
 Using npm:
+
 ```bash
 npm run build
 ```
 
 Or using yarn:
+
 ```bash
 yarn build
 ```
@@ -93,6 +101,7 @@ yarn start
 ## Application Overview
 
 1. **Home Page**:
+
    - Allows users to select a vehicle make and a production year from dropdowns.
    - The "Next" button becomes enabled once both selections are made.
 
@@ -128,4 +137,3 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 ---
 
 Thank you for using the Car Dealer Application! Feel free to explore the code and contribute to the project.
-

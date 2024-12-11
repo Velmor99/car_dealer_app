@@ -1,11 +1,11 @@
-import { IVehicleInfo } from "@/interfaces/AllVehiclesName";
-import { fetchVehicleMakes, generateYears } from "../../../../lib/api";
-import { Suspense } from "react";
-import VehiclesList from "./VehiclesList";
+import { IVehicleInfo } from '@/interfaces/AllVehiclesName';
+import { fetchVehicleMakes, generateYears } from '../../../../lib/api';
+import { Suspense } from 'react';
+import VehiclesList from './VehiclesList';
 
 interface PageProps {
-    makeId: string,
-    year: number
+  makeId: string;
+  year: number;
 }
 
 export async function generateStaticParams() {
@@ -32,13 +32,7 @@ export default async function ResultPage({
   const { makeId, year } = await params;
 
   return (
-    <Suspense
-      fallback={
-        <div>
-          Loading...
-        </div>
-      }
-    >
+    <Suspense fallback={<div>Loading...</div>}>
       <VehiclesList makeId={makeId} year={year} />
     </Suspense>
   );
